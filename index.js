@@ -16,8 +16,10 @@ app.use(express.json());
 
 // rotas da API
 const personRoutes = require('./routes/pesonRoutes');
+const registerUser = require('./routes/registerUser');
 
 app.use('/person', personRoutes);
+app.use('/auth', registerUser);
 
 // rota inicial / endpoint
 app.get('/', (req, res) => {
